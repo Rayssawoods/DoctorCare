@@ -1,9 +1,8 @@
 # DoctorCare
 
 Projeto desenvolvido durante a #Next Level Week Return 2022.
-<p align="center">
-  <img alt="License" src="https://img.shields.io/static/v1?label=license&message=MIT&color=7159c1&labelColor=000000">
-</p>
+
+ <img alt="DoctorCare: LandingPage" title="DoctorCare" src="https://github.com/Rayssawoods/DoctorCare/blob/main/NLW8/NLW/assets/Hero-section.png" />
 
 ### 🚀Tecnologias
 
@@ -24,6 +23,9 @@ Você pode visualizar o layout do projeto através [desse link](<https://www.fig
 
 
 ### :memo: Licença
+<p>
+  <img alt="License" src="https://img.shields.io/static/v1?label=license&message=MIT&color=7159c1&labelColor=000000">
+</p>
 
 Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE.md) para mais detalhes.
 
