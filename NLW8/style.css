@@ -1,54 +1,74 @@
+/* ========= GERAL ============== */
 * {
   margin: 0;
   box-sizing: border-box;
 }
-
 :root {
+  /*Declaração de variáveis de cores*/
   --primary-color: hsl(170, 100%, 26%);
   --headline: hsl(210, 11%, 15%);
   --paragraph: hsl(210, 9%, 31%);
+  --brand-beige: hsl(39, 100%, 97%);
+  --brand-green: hsl(170, 100%, 26%);
+  --brand-light: hsl(148, 23%, 89%);
 
-  font-size: 62.5%; /* 1rem = 10px */
+  font-size: 62.5%; /*1 rem = 10px  ---> se fosse 100% dai 1rem = 16px que é o tam padrão do browser*/
+
+  --nav-height: 7.2rem;
 }
 
 body {
   font-family: 'DM Sans';
-  font-size: 1.6rem;
-
+  font-size: 1.6rem; /* equivale a 16px de acordo com a config. do root */
   text-align: center;
 }
 
-header {
+.wrapper {
   width: 37.5rem;
-  margin-right: auto;
-  margin-left: auto;
-  margin-top: 4.1rem;
+  margin-inline: auto;
+  padding-inline: 2.4rem;
 }
 
-h4 {
-  font-size: 1.4rem;
+/* ========= HEADER ============== */
+header {
+  margin-top: calc(4.1rem + var(--nav-height));
+}
+
+header::before {
+  content: '';
+  width: 100vw;
+  height: calc(108rem + nav-height);
+  background-color: var(--brand-light);
+  display: block;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+header h4 {
+  font-size: 1.4rem; /*1.4 rem = 14px*/
   color: var(--primary-color);
   margin-bottom: 1.6rem;
 }
 
-h1 {
+header h1 {
   font-size: 3.4rem;
   color: var(--headline);
   line-height: 130%;
-
   margin-bottom: 2.4rem;
 }
 
-p {
+header p {
   font-size: 1.8rem;
   line-height: 150%;
   font-weight: 400;
   color: var(--paragraph);
-
   margin-bottom: 3.2rem;
 }
 
-button {
+header button {
   background: var(--primary-color);
 
   border: none;
@@ -60,9 +80,9 @@ button {
   width: 26.3rem;
 
   color: white;
+  text-transform: uppercase;
   font-size: 1.4rem;
   font-weight: 700;
-  text-transform: uppercase;
 
   display: flex;
   align-items: center;
@@ -71,4 +91,78 @@ button {
 
   margin-right: auto;
   margin-left: auto;
+}
+
+img {
+  /* margin-bottom: -25px; */
+}
+
+header img {
+  width: 26.4rem;
+  display: block;
+  margin-inline: auto;
+  object-position: 0 2rem;
+}
+
+.stats {
+  width: 32.7rem;
+  padding-block: 4rem;
+  margin-inline: auto;
+
+  background-color: var(--brand-beige);
+  border: 1px solid var(--brand-light);
+  border-radius: 0.6rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 6rem;
+}
+
+.stat h3 {
+  font-size: 4.8rem;
+  color: var(--headline);
+  line-height: 130%;
+
+  margin-bottom: 0.4rem;
+}
+
+.stat p {
+  margin: 0;
+  color: var(--primary-color);
+  font-size: 1.6rem; /*Não precisaria deste atributo uma vez que ele foi declarado no body */
+  line-height: 150%;
+}
+
+/* ========= NAVIGATION ============== */
+
+nav {
+  display: flex;
+
+  height: var(--nav-height);
+
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+nav .wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav.scroll {
+  background: var(--primary-color);
+  width: 100vw;
+}
+
+/*{indicar o num do svg q quer aplicar */
+nav.scroll svg:nth-child(1) path {
+  fill: white;
+}
+
+nav.scroll svg:nth-child(2) path {
+  stroke: white;
 }
