@@ -2,7 +2,7 @@
 
 Projeto desenvolvido durante a #Next Level Week Return 2022.
 
- <img alt="DoctorCare: LandingPage" title="DoctorCare" src="https://github.com/Rayssawoods/DoctorCare/blob/main/NLW8/NLW/assets/Hero-section.png" />
+ <img alt="DoctorCare: LandingPage" title="DoctorCare" src="https://github.com/Rayssawoods/DoctorCare/blob/main/NLW8/assets/Hero-section.png" />
 
 ### 🚀Tecnologias
 
